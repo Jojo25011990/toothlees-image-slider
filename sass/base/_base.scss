@@ -1,0 +1,40 @@
+@use '../abstract' as *;
+
+// *** Body ***
+body {
+  background-color: $color-dark;
+  color: $color-light;
+
+  overflow: hidden;
+
+  font-family: 'Orbitron', sans-serif;
+
+  @include font-settings(1.5rem, 600, 2rem, 0.1rem);
+  @include dimension-settings(100vw, 100vh);
+}
+// *** End of Body ***
+
+// *** Section ***
+.section {
+  position: relative;
+
+  background-color: $color-dark;
+
+  overflow: hidden;
+
+  @include dimension-settings(100vw, 100%);
+}
+// *** End of Section ***
+
+// *** Wrapper ***
+.wrapper {
+  text-align: center;
+
+  @include dimension-settings(100%, 7rem, $max-width: 111rem);
+  @include flex-settings(center, center, column, 3rem);
+
+  @media (max-width: 750px) {
+    margin: 0 2rem;
+  }
+}
+// *** End of Wrapper ***

@@ -1,0 +1,21 @@
+@use '../abstract' as *;
+
+// *** Section 01 ***
+.section01 {
+  @include flex-settings;
+
+  // *** Heading Primary ***
+  .heading__primary {
+    @include font-settings(5rem, 900);
+
+    @media (max-width: 750px) {
+      @include font-settings(3.25rem);
+    }
+
+    @media (max-width: 500px) {
+      @include font-settings(2.25rem);
+    }
+  }
+  // *** End of Heading Primary ***
+}
+// *** End of Section 01 ***

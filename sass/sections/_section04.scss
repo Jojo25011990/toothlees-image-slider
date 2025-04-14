@@ -1,0 +1,86 @@
+@use '../abstract' as *;
+
+// *** Section 04 ***
+.section04 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  background-color: $color-black;
+
+  @include dimension-settings(100%, 100vh);
+  @include flex-settings(center, center, column, 20rem);
+
+  display: none;
+
+  // *** Title ***
+  &__title {
+    // *** Span ***
+    &-span {
+      display: inline-block;
+      letter-spacing: -0.6rem;
+      @include font-settings(5rem, 900);
+
+      @media (max-width: 800px) {
+        @include font-settings(3.5rem, 900);
+      }
+
+      @media (max-width: 600px) {
+        @include font-settings(2rem, 900);
+      }
+    }
+    // *** End of Span ***
+  }
+  // *** End of Title ***
+}
+// *** End of Section 04 ***
+
+// *** Slider ***
+.slider {
+  position: relative;
+
+  // *** Container ***
+  &__container {
+    position: relative;
+
+    transform-style: preserve-3d;
+    transform: perspective(100rem) rotateY(0deg);
+    transition: transform 0.7s;
+
+    @include dimension-settings(25rem, 15rem);
+
+    @media (max-width: 1000px) {
+      @include dimension-settings(20rem, 10rem);
+    }
+
+    // *** Span ***
+    & span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotateY(calc(var(--i) * 45deg)) translateZ(40rem);
+
+      @include dimension-settings(100%, 100%);
+
+      @media (max-width: 1000px) {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(30rem);
+      }
+
+      // *** Img ***
+      & img {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        object-fit: cover;
+
+        @include dimension-settings(100%, 100%);
+      }
+      // *** End of Img ***
+    }
+    // *** End of Span ***
+  }
+  // *** End of Container ***
+}
+// *** End of Slider ***

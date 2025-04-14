@@ -1,0 +1,156 @@
+@use '../abstract' as *;
+
+// *** Toothtless ***
+.toothless {
+  position: absolute;
+
+  @include dimension-settings(30rem);
+
+  @media (max-width: 800px) {
+    @include dimension-settings(20rem);
+  }
+
+  &-01 {
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+  }
+  &-02 {
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+  }
+  &-03 {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  &-04 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include dimension-settings(51rem, 50rem);
+
+    @media (max-width: 800px) {
+      @include dimension-settings(41rem, 40rem);
+    }
+
+    @media (max-width: 560px) {
+      @include dimension-settings(31rem, 30rem);
+    }
+
+    // *** Circles ***
+    &__circle {
+      position: absolute;
+      z-index: 999;
+
+      background-color: $color-white;
+      border-radius: 50%;
+
+      &-01,
+      &-02,
+      &-03 {
+        @media (max-width: 560px) {
+          display: none;
+        }
+      }
+
+      &-01 {
+        top: 25.3rem;
+        left: 21.9rem;
+
+        @include dimension-settings(1rem, 1rem);
+
+        @media (max-width: 800px) {
+          top: 20.3rem;
+          left: 18.2rem;
+        }
+      }
+
+      &-02 {
+        top: 25.3rem;
+        left: 15.9rem;
+
+        @include dimension-settings(1.5rem, 1.5rem);
+
+        @media (max-width: 800px) {
+          top: 20.3rem;
+          left: 13.9rem;
+        }
+      }
+
+      &-03 {
+        top: 25.3rem;
+        left: 8.9rem;
+
+        @include dimension-settings(2rem, 2rem);
+
+        @media (max-width: 800px) {
+          top: 19.9rem;
+          left: 8.9rem;
+        }
+      }
+    }
+    // *** End of Circles ***
+
+    // *** Text Bubble ***
+    &__textbubble {
+      position: absolute;
+      top: 16rem;
+      left: -13rem;
+
+      color: $color-dark;
+      background-color: $color-white;
+
+      border-radius: 60%;
+
+      @include dimension-settings(20rem, 10rem);
+      @include flex-settings;
+      @include font-settings(2rem, 700);
+
+      @media (max-width: 800px) {
+        top: 13rem;
+        left: -6rem;
+
+        @include dimension-settings(15rem, 7.5rem);
+        @include font-settings(1.5rem, 700);
+      }
+
+      @media (max-width: 560px) {
+        border-radius: 0;
+
+        top: 15rem;
+        left: -2rem;
+
+        padding-right: 4.1rem;
+
+        clip-path: polygon(
+          0% 0%,
+          76% 0,
+          76% 20%,
+          100% 20%,
+          76% 55%,
+          76% 100%,
+          0% 100%
+        );
+
+        @include dimension-settings(16rem, 5rem);
+        @include font-settings(1.3rem, 700);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 2.25rem;
+
+        border-radius: 50%;
+
+        background-color: $color-white;
+
+        @include dimension-settings(3rem, 3rem);
+      }
+    }
+    // *** End of Text Bubble ***
+  }
+}
+// *** End of Toothtless ***

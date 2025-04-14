@@ -1,0 +1,161 @@
+@use '../abstract' as *;
+
+// *** Section 03 ***
+.section03 {
+  background-color: $color-white;
+  display: none;
+
+  @include flex-settings;
+
+  // *** Overlay ***
+  .overlay {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+
+    background-color: $color-dark;
+
+    @include dimension-settings(100%, 100%, null, 70rem);
+  }
+  // *** End of Overlay ***
+
+  // *** Side, Side left && Side right ***
+  &__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    background-color: $color-dark;
+
+    @include dimension-settings(100%, 100%);
+  }
+
+  &__side-left {
+    clip-path: polygon(
+      0% 0%,
+      68% 0%,
+      34% 5%,
+      68% 10%,
+      34% 15%,
+      68% 20%,
+      34% 25%,
+      68% 30%,
+      34% 35%,
+      68% 40%,
+      34% 45%,
+      68% 50%,
+      34% 55%,
+      68% 60%,
+      34% 65%,
+      68% 70%,
+      34% 75%,
+      68% 80%,
+      34% 85%,
+      68% 90%,
+      34% 95%,
+      69% 100%,
+      0 100%
+    );
+  }
+
+  &__side-right {
+    clip-path: polygon(
+      100% 0%,
+      68% 0%,
+      34% 5%,
+      68% 10%,
+      34% 15%,
+      68% 20%,
+      34% 25%,
+      68% 30%,
+      34% 35%,
+      68% 40%,
+      34% 45%,
+      68% 50%,
+      34% 55%,
+      68% 60%,
+      34% 65%,
+      68% 70%,
+      34% 75%,
+      68% 80%,
+      34% 85%,
+      68% 90%,
+      34% 95%,
+      69% 100%,
+      100% 100%
+    );
+  }
+  // *** End of Side, Side left && Side right ***
+
+  // *** Container ***
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%) scale(1);
+
+    background-color: $color-dark;
+    border-radius: 50%;
+
+    @include dimension-settings(2rem, 2rem);
+  }
+  // *** End of Container ***
+
+  // *** Gooey Wrapper ***
+  .gooey-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+
+    background-color: $color-white;
+
+    opacity: 0;
+    visibility: hidden;
+    filter: blur(10px) contrast(30);
+
+    @include dimension-settings(20rem, 20rem);
+    @include flex-settings;
+  }
+  // *** End of Gooey Wrapper ***
+
+  // *** Gooey ***
+  .gooey {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: $color-dark;
+
+    border-radius: 50%;
+  }
+  // *** End of Gooey ***
+
+  // *** Gooey Balls 01, 02, 03, 04 ***
+  .gooey-ball-1 {
+    animation: goeey 3s linear infinite;
+    width: 7rem;
+    height: 7rem;
+
+    background-color: $color-dark;
+    @include dimension-settings(7rem, 7rem);
+  }
+
+  .gooey-ball-2,
+  .gooey-ball-3,
+  .gooey-ball-4 {
+    width: 4rem;
+    height: 4rem;
+    z-index: 90;
+
+    @include dimension-settings(4rem, 4rem);
+  }
+
+  // *** End of Gooey Balls 01, 02, 03, 04 ***
+}
+// *** End of Section 03 ***

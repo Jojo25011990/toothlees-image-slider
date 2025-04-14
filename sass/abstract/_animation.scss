@@ -1,0 +1,121 @@
+@use './variables' as *;
+
+// *** Section 03 ****
+// *** Move Left Side ***
+@keyframes moveLeft {
+  to {
+    left: -100%;
+  }
+}
+// *** End of Move Left Side ***
+
+// *** Move Right Side ***
+@keyframes moveRight {
+  to {
+    left: 100%;
+  }
+}
+// *** End of Move Right Side ***
+
+// *** Slide Down Overlay ***
+@keyframes slideDown {
+  to {
+    transform: translateX(-50%) translateY(100%);
+  }
+}
+// *** End of Slide Down Overlay ***
+
+// *** Container ***
+@keyframes scale-section {
+  to {
+    transform: translate(-50%, -50%) scale(130);
+  }
+}
+// *** End of Container ***
+
+// *** Gooey Wrapper ***
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+// *** End of Gooey Wrapper ***
+
+// *** Gooey && Gooey Balls ***
+@keyframes gooey {
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  }
+
+  14% {
+    border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+  }
+
+  28% {
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+  }
+
+  42% {
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+  }
+
+  56% {
+    border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+  }
+
+  70% {
+    border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+  }
+
+  84% {
+    border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+  }
+}
+
+@keyframes gooey-2 {
+  0% {
+    left: 50%;
+  }
+
+  50%,
+  80% {
+    left: 85%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+@keyframes gooey-3 {
+  0% {
+    left: 50%;
+  }
+
+  50%,
+  80% {
+    left: 15%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+@keyframes gooey-4 {
+  0% {
+    top: 50%;
+  }
+
+  50%,
+  80% {
+    top: 85%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+// *** End of Gooey && Gooey Balls ***
+
+// *** End of Section 03 ****
