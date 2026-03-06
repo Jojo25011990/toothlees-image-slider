@@ -1,17 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Creative Toothless image slider with GSAP animations and interactive sequences. Vanilla system - HTML, SASS, JS, GSAP"
+    />
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
     />
+    <!-- End of Google Fonts -->
 
-    <title>Toothless And Image Slider</title>
+    <title>Toothless And Image Slider - HTML, SASS, JS, GSAP</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -73,7 +79,7 @@
     <!-- Section 04 -->
     <section class="section section04">
       <!-- Title -->
-      <h1 class="section04__title">
+      <h2 class="section04__title">
         <span class="section04__title-span">T</span>
         <span class="section04__title-span">o</span>
         <span class="section04__title-span">o</span>
@@ -97,37 +103,43 @@
         <span class="section04__title-span">r</span>
         <span class="section04__title-span">l</span>
         <span class="section04__title-span">d</span>
-      </h1>
+      </h2>
       <!-- End of Title -->
 
       <!-- Slider -->
-      <div class="slider">
+      <div class="slider" aria-live="polite">
         <div class="slider__container">
-          <span style="--i: 1">
-            <img src="img/toothless and light fury 01.jpg" />
+          <figure style="--i: 1">
+            <img
+              src="img/toothless and light fury 01.jpg"
+              alt="Toothless and Light Fury together"
+            />
             <h2>Dogo</h2>
-          </span>
-          <span style="--i: 2">
-            <img src="img/toothless and light fury 02.jpg" />
-          </span>
-          <span style="--i: 3">
-            <img src="img/cover-1.jpg" />
-          </span>
-          <span style="--i: 4">
-            <img src="img/cover-4.jpg" />
-          </span>
-          <span style="--i: 5">
-            <img src="img/image-4.jpg" />
-          </span>
-          <span style="--i: 6">
-            <img src="img/image-1.jpg" />
-          </span>
-          <span style="--i: 7">
-            <img src="img/image-2.jpg" />
-          </span>
-          <span style="--i: 8">
-            <img src="img/image-3.jpg" />
-          </span>
+          </figure>
+          <figure style="--i: 2">
+            <img
+              src="img/toothless and light fury 02.jpg"
+              alt="Toothless and Light Fury together"
+            />
+          </figure>
+          <figure style="--i: 3">
+            <img src="img/cover-1.jpg" alt="Toothless artwork 01" />
+          </figure>
+          <figure style="--i: 4">
+            <img src="img/cover-4.jpg" alt="Toothless artwork 02" />
+          </figure>
+          <figure style="--i: 5">
+            <img src="img/image-4.jpg" alt="Toothless artwork 03" />
+          </figure>
+          <figure style="--i: 6">
+            <img src="img/image-1.jpg" alt="Toothless artwork 04" />
+          </figure>
+          <figure style="--i: 7">
+            <img src="img/image-2.jpg" alt="Toothless artwork 05" />
+          </figure>
+          <figure style="--i: 8">
+            <img src="img/image-3.jpg" alt="Toothless artwork 06" />
+          </figure>
         </div>
       </div>
       <!-- End of Slider -->

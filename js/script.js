@@ -42,7 +42,6 @@ window.addEventListener('load', function () {
   let x = 0;
   let sliderFuncDelay = 2000;
   // *** End of Section 04 ***
-
   // *** End of Selects Elements ***
 
   // *** GSAP TIMELINES ***

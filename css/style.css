@@ -488,7 +488,7 @@ body {
     height: 10rem;
   }
 }
-.slider__container span {
+.slider__container figure {
   position: absolute;
   top: 0;
   left: 0;
@@ -497,11 +497,11 @@ body {
   height: 100%;
 }
 @media (max-width: 1000px) {
-  .slider__container span {
+  .slider__container figure {
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(30rem);
   }
 }
-.slider__container span img {
+.slider__container figure img {
   position: absolute;
   left: 0;
   top: 0;
