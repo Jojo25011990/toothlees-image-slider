@@ -32,6 +32,11 @@
     @include dimension-settings(100%, 100%);
   }
 
+  &__side-left,
+  &__side-right {
+    will-change: transform, clip-path;
+  }
+
   &__side-left {
     clip-path: polygon(
       0% 0%,
